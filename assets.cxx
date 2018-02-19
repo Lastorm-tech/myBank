@@ -952,6 +952,35 @@ namespace mBank
         }
         return pv1_fields;
     }
+    
+    /**
+     * Function which do the binary type search inside a sorted vector
+     * @see binary search
+     * @param 
+     * @param
+     * @return true if element found
+     */
+    template <typename T>
+    bool binary_search(const std::vector<T> & pvr_check, const T & pcr_elem)
+    {
+       for(unsigned int i_min = 0, i_max = pvr_check.size(), lu4_median = i_max / 2; i_min != i_max;)
+       {
+          if(pcr_elem == pvr_check[lu4_median])
+             return true;
+          else if(pcr_elem < pvr_check[lu4_median])
+          {
+             i_max = lu4_median;
+             lu4_median -= ((lu4_median - i_min) / 2);
+          }
+          else
+          {
+             i_min = lu4_median;
+             lu4_median += ((i_max - i_min) / 2);
+          }
+       }
+       return false;
+    }
+    
 }; //mBank::
 
 int main(int argc, char *argv[])
