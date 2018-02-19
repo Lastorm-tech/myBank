@@ -988,5 +988,23 @@ namespace mBank
 int main(int argc, char *argv[])
 {
     //empty
+    std::vector<int> my_vecBool;
+    my_vecBool.push_back(1);
+    my_vecBool.push_back(4);
+    my_vecBool.push_back(8);
+    my_vecBool.push_back(12);
+    my_vecBool.push_back(15);
+    my_vecBool.push_back(16);
+    my_vecBool.push_back(17);
+    my_vecBool.push_back(20);
+    my_vecBool.push_back(21);
+    my_vecBool.push_back(30);
+    my_vecBool.push_back(75);
+    my_vecBool.push_back(85);
+    my_vecBool.push_back(86);
+    my_vecBool.push_back(87);
+    
+    std::cout << mBank::binary_search(my_vecBool, 8) << std::endl;
+    
     return 0;
 };
