@@ -977,6 +977,8 @@ namespace mBank
              i_min = lu4_median;
              lu4_median += ((i_max - i_min) / 2);
           }
+          if(i_min == lu4_median || i_max == lu4_median)
+             return false;
        }
        return false;
     }
