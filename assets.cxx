@@ -867,55 +867,55 @@ namespace mBank
           //move each bits to get the flag one inside the range of 1byte
           while(!((pzr_in[0] >> l1_i) & 0x01) && l1_i++ < __CHAR_BIT__);
           //if our flag is out of scope false, else assign the value and return true
-          return (l1_i > pzr_match.size()) ? false : (pzr_ref.assign(string(1, pzr_match[l1_i]))[0] & 0xFF);
+          return (l1_i > pzr_match.size()) ? false : (pzr_ref.assign(std::string(1, pzr_match[l1_i]))[0] & 0xFF);
        }
        return false;
     }
     
     //construct on first use
-    static vector<pair<byte1, ubyte1> > s1v_fieldLength = 
-       constVec<pair<byte1, ubyte1> >(make_pair<byte1, ubyte1>( 8, 0))  //  0 : -
-                                     (make_pair<byte1, ubyte1>( 8, 0))  //  1 : -
-                                     (make_pair<byte1, ubyte1>(-1, 0))  //  2 : -
-                                     (make_pair<byte1, ubyte1>( 3, 0))  //  3 : -
-                                     (make_pair<byte1, ubyte1>( 6, 0))  //  4 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  //  5 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  //  6 : -
-                                     (make_pair<byte1, ubyte1>( 5, 0))  //  7 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  //  8 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  //  9 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 10 : -
-                                     (make_pair<byte1, ubyte1>( 3, 0))  // 11 : -
-                                     (make_pair<byte1, ubyte1>( 3, 0))  // 12 : -
-                                     (make_pair<byte1, ubyte1>( 2, 0))  // 13 : -
-                                     (make_pair<byte1, ubyte1>( 2, 0))  // 14 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 15 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 16 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 17 : -
-                                     (make_pair<byte1, ubyte1>( 2, 0))  // 18 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 19 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 20 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 21 : -
-                                     (make_pair<byte1, ubyte1>( 2, 0))  // 22 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 23 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 24 : -
-                                     (make_pair<byte1, ubyte1>( 1, 0))  // 25 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 26 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 27 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 28 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 29 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 30 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 31 : -
-                                     (make_pair<byte1, ubyte1>(-1, 0))  // 32 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 33 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 34 : -
-                                     (make_pair<byte1, ubyte1>(-1, 0))  // 35 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 36 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 37 : -
-                                     (make_pair<byte1, ubyte1>( 3, 0))  // 38 : -
-                                     (make_pair<byte1, ubyte1>( 1, 0))  // 39 : -
-                                     (make_pair<byte1, ubyte1>( 0, 0))  // 40 : -
-                                     (make_pair<byte1, ubyte1>( 6, 0)); // 41 : -
+    static std::vector<std::pair<char, unsigned char> > s1v_fieldLength = 
+       constVec<std::pair<char, unsigned char> >(std::make_pair<char, unsigned char>( 8, 0))  //  0 : -
+                                                (std::make_pair<char, unsigned char>( 8, 0))  //  1 : -
+                                                (std::make_pair<char, unsigned char>(-1, 0))  //  2 : -
+                                                (std::make_pair<char, unsigned char>( 3, 0))  //  3 : -
+                                                (std::make_pair<char, unsigned char>( 6, 0))  //  4 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  //  5 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  //  6 : -
+                                                (std::make_pair<char, unsigned char>( 5, 0))  //  7 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  //  8 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  //  9 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 10 : -
+                                                (std::make_pair<char, unsigned char>( 3, 0))  // 11 : -
+                                                (std::make_pair<char, unsigned char>( 3, 0))  // 12 : -
+                                                (std::make_pair<char, unsigned char>( 2, 0))  // 13 : -
+                                                (std::make_pair<char, unsigned char>( 2, 0))  // 14 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 15 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 16 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 17 : -
+                                                (std::make_pair<char, unsigned char>( 2, 0))  // 18 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 19 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 20 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 21 : -
+                                                (std::make_pair<char, unsigned char>( 2, 0))  // 22 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 23 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 24 : -
+                                                (std::make_pair<char, unsigned char>( 1, 0))  // 25 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 26 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 27 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 28 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 29 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 30 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 31 : -
+                                                (std::make_pair<char, unsigned char>(-1, 0))  // 32 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 33 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 34 : -
+                                                (std::make_pair<char, unsigned char>(-1, 0))  // 35 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 36 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 37 : -
+                                                (std::make_pair<char, unsigned char>( 3, 0))  // 38 : -
+                                                (std::make_pair<char, unsigned char>( 1, 0))  // 39 : -
+                                                (std::make_pair<char, unsigned char>( 0, 0))  // 40 : -
+                                                (std::make_pair<char, unsigned char>( 6, 0)); // 41 : -
     
     /**
      * Function which retrive the starting position to substring the binding key fields from the raw netData.
@@ -925,12 +925,12 @@ namespace mBank
      * @param const string reference
      * @return vector<pair<ubyte1, ubyte1> > with cut capacity position's
      */
-    vector<pair<ubyte1, ubyte1> > & computePosition(vector<pair<ubyte1, ubyte1> > & pv1_fields, const string & pzr_bitmapRaw, const string & pzr_rawNetData)
+    std::vector<std::pair<unsigned char, unsigned char> > & computePosition(std::vector<std::pair<unsigned char, unsigned char> > & pv1_fields, const std::string & pzr_bitmapRaw, const std::string & pzr_rawNetData)
     {
-        string lz_bitmapRaw(pzr_bitmapRaw);
+        std::string lz_bitmapRaw(pzr_bitmapRaw);
 
         //feed the presence factor of our vector field
-        for(ubyte1 lu1_byte = 0, lu1_bit = 1; lu1_byte < lz_bitmapRaw.size(); ++lu1_byte)
+        for(unsigned char lu1_byte = 0, lu1_bit = 1; lu1_byte < lz_bitmapRaw.size(); ++lu1_byte)
         {
            lz_bitmapRaw[lu1_byte] -= (lz_bitmapRaw[lu1_byte] > 64) ? 55 : 0;
            s1v_fieldLength[lu1_bit++].second = ((pzr_bitmapRaw[lu1_byte] & 0x0F) & 0x01);
@@ -940,8 +940,8 @@ namespace mBank
         }
 
         //register the starting position for extracting the binding key fields
-        ubyte4 l4_cutCapacity = 0;
-        for(ubyte1 lu1_itt = 0, lu1_jtt; lu1_itt < s1v_fieldLength.size(); ++lu1_itt)
+        unsigned int l4_cutCapacity = 0;
+        for(unsigned char lu1_itt = 0, lu1_jtt; lu1_itt < s1v_fieldLength.size(); ++lu1_itt)
         {
            for(lu1_jtt = 0; lu1_jtt < pv1_fields.size(); ++lu1_jtt)
            {
