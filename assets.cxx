@@ -261,11 +261,13 @@ namespace mBank
     {
         return (uint32_t)((((p1r_left & 0x0000FFFF) << ((sizeof(uint32_t) * 8) / 2)) | (p1r_right & 0x0000FFFF)) & 0xFFFFFFFF);
     }
+    /*
     uint64_t bind_(const uint32_t & p1r_left, const uint32_t & p1r_right)
     {
         return (uint64_t)((((p1r_left & 0x00000000FFFFFFFF) << ((sizeof(uint64_t) * 8) / 2)) | (p1r_right & 0x00000000FFFFFFFF)) & 0xFFFFFFFFFFFFFFFF);
     }
-
+    */
+    
     /**
      * function which unpad a specific char from a string beside a given direction
      * @see e.g : for string("htr0000") removing 0x30 will end in a return string("htr")
