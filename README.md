@@ -1,6 +1,6 @@
 # myBank
 
-# <a name="summary">Detailed report on module anonymous</a>
+# <a name="summary">Detailed report on module assets.cxx</a>
 
 <table border="" width="100%">
 
